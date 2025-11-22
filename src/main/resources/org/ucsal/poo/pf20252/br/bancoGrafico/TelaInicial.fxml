@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER"
+      spacing="37.0"
+      styleClass="root-container"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.ucsal.poo.pf20252.br.bancoGrafico.InicioController"
+      stylesheets="@tela-inicial.css">
+
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <!-- Header -->
+    <VBox alignment="CENTER" spacing="37.0">
+        <ImageView fitHeight="100" fitWidth="200" preserveRatio="true">
+            <Image url="@images/logo.png" />
+        </ImageView>
+        <Label styleClass="header-title" text="Bem-vindo ao Java-Bank" />
+    </VBox>
+
+    <!-- Main Content -->
+    <VBox alignment="CENTER" spacing="37.0">
+        <Label styleClass="main-title" text="Selecione sua conta:" />
+
+        <VBox alignment="CENTER" spacing="45.0" styleClass="buttons-container">
+            <Button fx:id="btnCorrente" onAction="#onContaCorrenteClick" styleClass="account-button" text="Conta Corrente" />
+            <Button fx:id="btnPoupanca" onAction="#onContaPoupancaClick" styleClass="account-button" text="Conta Poupança" />
+        </VBox>
+    </VBox>
+
+</VBox>

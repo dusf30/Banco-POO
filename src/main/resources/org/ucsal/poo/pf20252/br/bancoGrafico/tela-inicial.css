@@ -1,0 +1,48 @@
+/* REMOVA esta linha */
+/* @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
+
+.root-container {
+    -fx-background-color: linear-gradient(to bottom right,
+    rgba(250, 250, 250, 0.05) 0%,
+    rgba(38, 38, 38, 0.10) 100%),
+    #0A0A0A;
+    -fx-alignment: center;
+    -fx-padding: 30px;
+}
+
+.header-title, .main-title {
+    -fx-text-fill: #FAFAFA;
+    -fx-font-family: "System"; /* Use fonte do sistema */
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-alignment: center;
+}
+
+.buttons-container {
+    -fx-alignment: center;
+    -fx-spacing: 45px;
+}
+
+.account-button {
+    -fx-background-color: #FFF;
+    -fx-text-fill: #000000;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-pref-width: 184px;
+    -fx-pref-height: 31px;
+    -fx-border-color: #262626;
+    -fx-border-width: 0.53px;
+    -fx-border-radius: 14px;
+    -fx-background-radius: 14px;
+    -fx-padding: 4px 8px 4px 8px;
+    -fx-alignment: center;
+}
+
+.account-button:hover {
+    -fx-background-color: #F0F0F0;
+    -fx-cursor: hand;
+}
+
+.account-button:pressed {
+    -fx-background-color: #E0E0E0;
+}

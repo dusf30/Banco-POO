@@ -1,0 +1,120 @@
+.root-container {
+    -fx-background-color: linear-gradient(to bottom right,
+    rgba(250, 250, 250, 0.05) 0%,
+    rgba(38, 38, 38, 0.10) 100%),
+    #0A0A0A;
+    -fx-alignment: center;
+}
+
+.header-title {
+    -fx-text-fill: #FAFAFA;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+
+.opcoes-container {
+    -fx-alignment: center-right;
+}
+
+/* Saldo Box Corrigido */
+.saldo-box {
+    -fx-background-color: linear-gradient(to right,
+    rgba(255, 255, 255, 0.10) 6.31%,
+    rgba(255, 255, 255, 0.00) 98.51%);
+    -fx-border-color: #A8A8A8;
+    -fx-border-width: 1px;
+    -fx-border-radius: 155px;
+    -fx-background-radius: 155px;
+    -fx-padding: 5px 30px 5px 30px;
+    -fx-pref-width: 384px;
+    -fx-pref-height: 46px;
+    -fx-alignment: center;
+}
+
+.saldo-label {
+    -fx-text-fill: #E6E6E6;
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+}
+
+.moeda-label {
+    -fx-text-fill: #E6E6E6;
+    -fx-font-family: "System";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.saldo-value {
+    -fx-text-fill: #E6E6E6;
+    -fx-font-family: "System";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Botão Olho Corrigido */
+.olho-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+.olho-button:hover {
+    -fx-opacity: 0.8;
+}
+
+.olho-button:armed {
+    -fx-opacity: 0.6;
+}
+
+/* Container dos botões de tarefas */
+.botoes-tarefas-container {
+    -fx-alignment: center;
+}
+
+.btn-box {
+    -fx-alignment: center;
+    -fx-spacing: 7px;
+}
+
+
+.botoes-tarefas {
+    -fx-background-color: #333;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-min-width: 62px;
+    -fx-min-height: 62px;
+    -fx-pref-width: 62px;
+    -fx-pref-height: 62px;
+    -fx-max-width: 62px;
+    -fx-max-height: 62px;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-content-display: graphic-only;
+}
+
+.botoes-tarefas:hover {
+    -fx-background-color: #444;
+}
+
+.botoes-tarefas:pressed {
+    -fx-background-color: #555;
+}
+
+.botoes-tarefas .image-view {
+    -fx-opacity: 1;
+}
+
+.btn-label {
+    -fx-text-fill: #FAFAFA;
+    -fx-font-family: "System";
+    -fx-font-size: 12px;
+}
+
+.btn-voltar{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}

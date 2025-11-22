@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="80.0"
+      styleClass="root-container"
+      stylesheets="@tela-operacao.css"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.ucsal.poo.pf20252.br.bancoGrafico.TransferirController">
+
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <HBox alignment="CENTER" prefHeight="100">
+        <VBox alignment="CENTER_LEFT" styleClass="operacao-container">
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+                <HBox styleClass="imagem-operacao">
+                    <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
+                        <Image url="@images/transferir.png" />
+                    </ImageView>
+                </HBox>
+                <Label styleClass="operacao-label" text="Olá USUÁRIO,&#10;Deposite já" />
+            </HBox>
+        </VBox>
+
+        <Region HBox.hgrow="ALWAYS" />
+
+        <VBox alignment="CENTER" spacing="10.0">
+            <ImageView fitHeight="60" fitWidth="120" preserveRatio="true">
+                <Image url="@images/logo.png" />
+            </ImageView>
+            <Label styleClass="header-title" text="Java-Bank" />
+        </VBox>
+
+        <Region HBox.hgrow="ALWAYS" />
+
+        <VBox alignment="CENTER_RIGHT" styleClass="opcoes-container">
+            <HBox alignment="CENTER_RIGHT" spacing="23.0">
+                <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                    <Image url="@images/sino.png" />
+                </ImageView>
+            <Button fx:id="menu" contentDisplay="CENTER" mnemonicParsing="false" onAction="#voltarInicio" styleClass="btn-voltar">
+               <graphic>
+                      <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                          <Image url="@images/menu.png" />
+                      </ImageView>
+               </graphic>
+            </Button>
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="80.0">
+        <HBox alignment="CENTER" styleClass="saldo-box">
+            <HBox styleClass="saldo-container" HBox.hgrow="ALWAYS">
+                <VBox spacing="5.0">
+                    <Label styleClass="saldo-label" text="Saldo" />
+                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                        <Label styleClass="moeda-label" text="R$" />
+                        <Label fx:id="saldoConta" styleClass="saldo-value" text="*****" />
+                    </HBox>
+                </VBox>
+            </HBox>
+            <Button fx:id="olhoButton" onAction="#initialize" styleClass="olho-button">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                        <Image url="@images/olho.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+
+
+        <VBox alignment="CENTER_LEFT" spacing="10.0" styleClass="campo-texto">
+            <Label styleClass="campo-label" text="Digite o número da conta:" />
+            <TextField fx:id="numConta" promptText="Digite um valor" styleClass="campo-input" />
+            <Label styleClass="campo-label" text="Digite quanto deseja transferir:" />
+            <TextField fx:id="campoInput" promptText="Digite um valor" styleClass="campo-input" />
+            <Button styleClass="btn-confirmar" text="Transferir" />
+        </VBox>
+    </VBox>
+</VBox>
