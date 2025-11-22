@@ -26,9 +26,13 @@
             <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
                 <Image url="@images/sino.png" />
             </ImageView>
-            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
-                <Image url="@images/menu.png" />
-            </ImageView>
+            <Button fx:id="menu" contentDisplay="CENTER" mnemonicParsing="false" onAction="#voltarInicio" styleClass="btn-voltar">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <Image url="@images/menu.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
         </HBox>
     </HBox>
 

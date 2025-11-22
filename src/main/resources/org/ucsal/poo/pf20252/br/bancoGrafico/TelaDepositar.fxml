@@ -5,30 +5,26 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="80.0" styleClass="root-container" stylesheets="@tela-operacao.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ucsal.poo.pf20252.br.bancoGrafico.SacarController">
+<VBox alignment="CENTER" spacing="80.0" styleClass="root-container" stylesheets="@tela-operacao.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ucsal.poo.pf20252.br.bancoGrafico.DepositarController">
 
     <padding>
         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
     </padding>
 
-    <!-- Header Corrigido -->
     <HBox alignment="CENTER" prefHeight="100">
-        <!-- Operação no canto esquerdo -->
         <VBox alignment="CENTER_LEFT" styleClass="operacao-container">
             <HBox alignment="CENTER_LEFT" spacing="5.0">
                 <HBox styleClass="imagem-operacao">
                     <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
-                        <Image url="@images/sacar.png" />
+                        <Image url="@images/depositar.png" />
                     </ImageView>
                 </HBox>
-                <Label styleClass="operacao-label" text="Olá USUÁRIO,&#10;Saque já" />
+                <Label styleClass="operacao-label" text="Olá USUÁRIO,&#10;Deposite já" />
             </HBox>
         </VBox>
 
-        <!-- Espaço central para forçar o posicionamento -->
         <Region HBox.hgrow="ALWAYS" />
 
-        <!-- Logo e Título no centro -->
         <VBox alignment="CENTER" spacing="10.0">
             <ImageView fitHeight="60" fitWidth="120" preserveRatio="true">
                 <Image url="@images/logo.png" />
@@ -36,29 +32,25 @@
             <Label styleClass="header-title" text="Java-Bank" />
         </VBox>
 
-        <!-- Espaço central para forçar o posicionamento -->
         <Region HBox.hgrow="ALWAYS" />
 
-        <!-- Opções no canto superior direito -->
         <VBox alignment="CENTER_RIGHT" styleClass="opcoes-container">
             <HBox alignment="CENTER_RIGHT" spacing="23.0">
                 <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
                     <Image url="@images/sino.png" />
                 </ImageView>
-                <Button fx:id="menu" contentDisplay="CENTER" mnemonicParsing="false" onAction="#voltarInicio" styleClass="btn-voltar">
-                    <graphic>
-                        <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
-                            <Image url="@images/menu.png" />
-                        </ImageView>
-                    </graphic>
-                </Button>
+            <Button fx:id="menu" contentDisplay="CENTER" mnemonicParsing="false" onAction="#voltarInicio" styleClass="btn-voltar">
+               <graphic>
+                      <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                          <Image url="@images/menu.png" />
+                      </ImageView>
+               </graphic>
+            </Button>
             </HBox>
         </VBox>
     </HBox>
 
-    <!-- Main Content -->
     <VBox alignment="CENTER" spacing="80.0">
-        <!-- Saldo Box -->
         <HBox alignment="CENTER" styleClass="saldo-box">
             <HBox styleClass="saldo-container" HBox.hgrow="ALWAYS">
                 <VBox spacing="5.0">
@@ -78,11 +70,11 @@
             </Button>
         </HBox>
 
-        <!-- Formulário de Saque -->
+
         <VBox alignment="CENTER_LEFT" spacing="10.0" styleClass="campo-texto">
-            <Label styleClass="campo-label" text="Digite quanto deseja sacar:" />
+            <Label styleClass="campo-label" text="Digite quanto deseja depositar:" />
             <TextField fx:id="campoInput" promptText="Digite um valor" styleClass="campo-input" />
-            <Button styleClass="btn-confirmar" text="Sacar" />
+            <Button styleClass="btn-confirmar" text="Depositar" />
         </VBox>
     </VBox>
 </VBox>

@@ -113,3 +113,8 @@
     -fx-font-family: "System";
     -fx-font-size: 12px;
 }
+
+.btn-voltar{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}

@@ -19,11 +19,13 @@ public class MainApplication extends Application {
     private static Scene telaInicial;
     private static Scene conta;
     private static Scene sacar;
+    private static Scene depositar;
 
     private static Conta contaCorrente = new ContaCorrente(1234.45);
     private static Conta contaPoupanca = new ContaPoupanca(789.10);
     private static ContaController contaController;
     private static SacarController sacarController;
+    private static DepositarController depositarController;
 
     public static ContaController getContaController() {
         return contaController;
@@ -50,6 +52,11 @@ public class MainApplication extends Application {
         sacarController = loaderSacar.getController();
         sacar = new Scene(fxmlSacar);
 
+        FXMLLoader loaderDepositar = new FXMLLoader(MainApplication.class.getResource("TelaDepositar.fxml"));
+        Parent fxmlDepositar = loaderDepositar.load();
+        depositarController = loaderDepositar.getController();
+        depositar = new Scene(fxmlDepositar);
+
         stageInicial.setTitle("JavaBank");
         stageInicial.setScene(telaInicial);
         stageInicial.show();
@@ -57,8 +64,10 @@ public class MainApplication extends Application {
 
     public static void changeScreen(Telas tela){
         switch (tela){
+            case INICIAL -> stage.setScene(telaInicial);
             case CONTA -> stage.setScene(conta);
             case SACAR -> stage.setScene(sacar);
+            case DEPOSITAR -> stage.setScene(depositar);
 
             default -> System.err.println("Tela inesistente");
         }
@@ -73,6 +82,10 @@ public class MainApplication extends Application {
             case SACAR -> {
                 sacarController.setContaAlvo(contaAlvo);
                 stage.setScene(sacar);
+            }
+            case DEPOSITAR -> {
+                depositarController.setContaAlvo(contaAlvo);
+                stage.setScene(depositar);
             }
             default -> System.err.println("Tela inexistente");
         }

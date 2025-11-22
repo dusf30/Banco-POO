@@ -153,3 +153,8 @@
 .btn-confirmar:pressed {
     -fx-background-color: #555;
 }
+
+.btn-voltar{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}
