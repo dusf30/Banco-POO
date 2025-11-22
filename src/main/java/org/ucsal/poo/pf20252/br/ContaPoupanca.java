@@ -1,24 +1,37 @@
 package org.ucsal.poo.pf20252.br;
 
+import java.util.Scanner;
+
 public class ContaPoupanca extends Conta {
 
     public ContaPoupanca(long numero, double saldo) {
         super(numero, saldo);
     }
 
+    @Override
+    public void sacar() {
+		Scanner saq = new Scanner(System.in);
+        System.out.println("Digite o valor do saque: ");
+        double valor = saq.nextDouble();
+        if (valor <= getSaldo()) {
+        	super.sacar();
+        } else { System.out.println("Valor indisponível para saque.");}
+        
+    }
+    
+    @Override
+	public void transferir(double valor, Conta destino) {
+		if (valor <= getSaldo()) {
+			super.transferir(valor, destino);
+		} else { System.out.println("Valor indisponível para tranferir."); }
 
-	/*
-	public double atualizarSaldo(double valor, int op) {
-		if (op == 1) {
-			setSaldo(depositar(valor)) ;
-		} else {
-			if (valor <= getSaldo()) {
-				setSaldo(sacar(valor));
-			} else {
-				System.out.println("O valor de saque desejado está acima do valor de saldo da conta.");
-			}
-		}
-		return getSaldo();
 	}
-	*/
+    
+    
+    @Override
+    public void atualizarSaldo() {
+		setSaldo(getSaldo() + getSaldo()*0.005);
+	}
+
+
 }

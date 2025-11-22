@@ -26,16 +26,10 @@ public abstract class Conta implements Operavel {
     }
 
 	public void sacar() {
-        try {
-            Scanner saq = new Scanner(System.in);
-            System.out.println("Digite o valor do saque: ");
-            double valor = saq.nextDouble();
-            saldo -= valor;
-		} catch (IllegalArgumentException e) {
-			System.out.println(e.getMessage());
-		} catch (InputMismatchException e) {
-			System.out.println("Digite um número válido");
-		}
+		Scanner saq = new Scanner(System.in);
+        System.out.println("Digite o valor do saque: ");
+        double valor = saq.nextDouble();
+        saldo -= valor;
     }
 
 
@@ -61,10 +55,14 @@ public abstract class Conta implements Operavel {
 
 
 
-
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+	
 	public double getSaldo() {
 		return saldo;
 	}
+	
 	
 	public void atualizarSaldo() {
 		
