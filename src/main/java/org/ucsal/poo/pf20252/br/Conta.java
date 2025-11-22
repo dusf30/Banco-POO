@@ -1,13 +1,15 @@
 package org.ucsal.poo.pf20252.br;
 
+import javafx.scene.control.Label;
 import org.ucsal.poo.pf20252.br.bancoGrafico.DepositarController;
+import org.ucsal.poo.pf20252.br.bancoGrafico.GeraisController;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public abstract class Conta implements Operavel {
-
 	long numero;
+	private boolean saldoVisivel = false;
 	private double saldo;
 
 	public Conta(long numero, double saldo) {
@@ -47,10 +49,16 @@ public abstract class Conta implements Operavel {
 	}
 
 	@Override
-	public void consultarSaldo() {
-		System.out.println(getSaldo());
+	public void consultarSaldo(Label saldoConta) {
+		saldoVisivel = !saldoVisivel;
+		if (saldoVisivel) {
+			saldoConta.setText(String.format("%.2f", saldo));
+		} else {
+			saldoConta.setText("*****");
+		}
 
 	}
+
 
 
 
