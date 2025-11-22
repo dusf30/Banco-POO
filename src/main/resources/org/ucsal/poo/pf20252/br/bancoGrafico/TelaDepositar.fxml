@@ -74,7 +74,7 @@
         <VBox alignment="CENTER_LEFT" spacing="10.0" styleClass="campo-texto">
             <Label styleClass="campo-label" text="Digite quanto deseja depositar:" />
             <TextField fx:id="campoInput" promptText="Digite um valor" styleClass="campo-input" />
-            <Button styleClass="btn-confirmar" text="Depositar" />
+            <Button onAction="#depositarBtn" styleClass="btn-confirmar" text="Depositar" />
         </VBox>
     </VBox>
 </VBox>
