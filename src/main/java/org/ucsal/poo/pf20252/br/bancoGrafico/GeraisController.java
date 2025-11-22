@@ -1,13 +1,15 @@
 package org.ucsal.poo.pf20252.br.bancoGrafico;
 
+import org.ucsal.poo.pf20252.br.Conta;
+import org.ucsal.poo.pf20252.br.Operavel;
+import org.ucsal.poo.pf20252.br.Telas;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.ucsal.poo.pf20252.br.Conta;
-import org.ucsal.poo.pf20252.br.Telas;
 
-public abstract class GeraisController {
+public abstract class GeraisController implements Operavel {
 
     private Conta contaAlvo;
 
@@ -32,9 +34,13 @@ public abstract class GeraisController {
     }
 
 
+	@Override
+	public void transferir(double valor, Conta destino) {
+		
+	}
 
-
-    private void consultarSaldo() {
+    @Override
+    public void consultarSaldo() {
         saldoVisivel = !saldoVisivel;
 
         if (saldoVisivel) {
