@@ -1,26 +1,24 @@
 package org.ucsal.poo.pf20252.br.bancoGrafico;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import org.ucsal.poo.pf20252.br.Conta;
+import org.ucsal.poo.pf20252.br.ValorInvalidoException;
 
+/**
+ * Controlador para a tela de depósito da aplicação bancária.
+ * Gerencia a operação de depósito em contas com tratamento de exceções.
+ *
+ * @author Daniel
+ * @version 1.0
+ * @see GeraisController
+ * @see ValorInvalidoException
+ */
 public class DepositarController extends GeraisController{
 
-    @Override
-    public void voltarInicio() {
-        super.voltarInicio();
-    }
-
-    @Override
-    public void initialize() {
-        super.initialize();
-    }
-
-    @Override
-    public Conta getContaAlvo() {
-        return super.getContaAlvo();
-    }
-
+    /**
+     * Executa a operação de depósito na conta alvo.
+     * Processa o valor, realiza validações e trata possíveis exceções.
+     * Exibe mensagens de sucesso ou erro conforme o resultado da operação.
+     */
     @FXML
     protected void depositarBtn(){
         try {
@@ -29,29 +27,10 @@ public class DepositarController extends GeraisController{
             mostrarSucesso("Deposito concluído");
         } catch (NumberFormatException e) {
             mostrarErro("Digite um número válido");
-        } catch (IllegalArgumentException e){
+        } catch (ValorInvalidoException e){
             mostrarErro("Só é possível depositar valores maiores que 0,00.");
         } finally {
             getCampoInput().setText("");
         }
     }
-
-
-
-    private void mostrarSucesso(String mensagem) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Sucesso");
-        alert.setContentText(mensagem);
-        alert.show();
-    }
-
-
-    private void mostrarErro(String mensagem) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("ERRO");
-        alert.setContentText(mensagem);
-        alert.show();
-    }
-
-
 }

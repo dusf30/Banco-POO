@@ -11,7 +11,7 @@
         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
     </padding>
 
-    <HBox alignment="CENTER" spacing="200.0">
+    <HBox alignment="CENTER" spacing="300.0">
         <VBox alignment="CENTER" spacing="10.0">
             <ImageView fitHeight="60" fitWidth="120" preserveRatio="true">
                 <Image url="@images/logo.png" />
@@ -19,7 +19,7 @@
             <Label styleClass="header-title" text="Java-Bank" />
         </VBox>
 
-        <HBox alignment="CENTER_RIGHT" spacing="23.0" styleClass="opcoes-container">
+        <HBox alignment="CENTER_RIGHT" spacing="15.0" styleClass="opcoes-container">
             <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
                 <Image url="@images/sino.png" />
             </ImageView>
@@ -44,7 +44,7 @@
                     </HBox>
                 </VBox>
             </HBox>
-            <Button fx:id="olhoButton" onAction="#initialize" styleClass="olho-button">
+            <Button fx:id="olhoButton" onAction="#consultarSaldoBtn" styleClass="olho-button">
                 <graphic>
                     <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                         <Image url="@images/olho.png" />
@@ -85,6 +85,17 @@
                     </graphic>
                 </Button>
                 <Label styleClass="btn-label" text="Transferir" />
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="7.0" styleClass="btn-box">
+                <Button fx:id="relatorioBtn" onAction="#onRelatorioBtnClick" styleClass="botoes-tarefas">
+                    <graphic>
+                        <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
+                            <Image url="@images/relatorio.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label styleClass="btn-label" text="Relatório" />
             </VBox>
         </HBox>
     </VBox>
