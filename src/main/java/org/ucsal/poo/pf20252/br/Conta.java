@@ -1,10 +1,6 @@
 package org.ucsal.poo.pf20252.br;
 
 import javafx.scene.control.Label;
-import org.ucsal.poo.pf20252.br.bancoGrafico.DepositarController;
-import org.ucsal.poo.pf20252.br.bancoGrafico.GeraisController;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public abstract class Conta implements Operavel {
@@ -17,19 +13,19 @@ public abstract class Conta implements Operavel {
 		this.saldo = saldo;
 	}
 
-	public void depositar(double valor) throws IllegalArgumentException{
+	public void depositar(double valor) throws ValorInvalidoException{
 		if (valor <=0){
-			throw new IllegalArgumentException();
+			throw new ValorInvalidoException();
 		}
 		saldo += valor;
 
     }
 
-	public void sacar() {
-		Scanner saq = new Scanner(System.in);
-        System.out.println("Digite o valor do saque: ");
-        double valor = saq.nextDouble();
-        saldo -= valor;
+	public void sacar(double valor) {
+		if (valor > saldo){
+			throw new ValorInvalidoException();
+		}
+		saldo -= valor;
     }
 
 
@@ -62,8 +58,8 @@ public abstract class Conta implements Operavel {
 	public double getSaldo() {
 		return saldo;
 	}
-	
-	
+
+
 	public void atualizarSaldo() {
 		
 	}

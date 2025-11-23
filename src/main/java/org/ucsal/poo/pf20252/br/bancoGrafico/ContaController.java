@@ -27,6 +27,4 @@ public class ContaController extends GeraisController{
         super.initialize();
     }
 
-
-
 }

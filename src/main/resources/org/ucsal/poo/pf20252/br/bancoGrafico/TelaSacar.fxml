@@ -82,7 +82,7 @@
         <VBox alignment="CENTER_LEFT" spacing="10.0" styleClass="campo-texto">
             <Label styleClass="campo-label" text="Digite quanto deseja sacar:" />
             <TextField fx:id="campoInput" promptText="Digite um valor" styleClass="campo-input" />
-            <Button styleClass="btn-confirmar" text="Sacar" />
+            <Button onAction="#sacarBtn" styleClass="btn-confirmar" text="Sacar" />
         </VBox>
     </VBox>
 </VBox>
