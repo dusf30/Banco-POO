@@ -1,6 +1,5 @@
 package org.ucsal.poo.pf20252.br;
 
-import java.util.Scanner;
 
 public class ContaPoupanca extends Conta {
     public ContaPoupanca(long numero, double saldo) {
@@ -20,7 +19,6 @@ public class ContaPoupanca extends Conta {
 	}
 
 
-    @Override
     public void atualizarSaldo() {
 		setSaldo(getSaldo() + getSaldo()*0.005);
 	}

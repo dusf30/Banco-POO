@@ -58,12 +58,6 @@ public abstract class Conta implements Operavel {
 	public double getSaldo() {
 		return saldo;
 	}
-
-
-	public void atualizarSaldo() {
-		
-	}
-
 }
 
 

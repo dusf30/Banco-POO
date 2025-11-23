@@ -66,7 +66,7 @@
                     </HBox>
                 </VBox>
             </HBox>
-            <Button fx:id="olhoButton" onAction="#initialize" styleClass="olho-button">
+            <Button fx:id="olhoButton" onAction="#consultarSaldoBtn" styleClass="olho-button">
                 <graphic>
                     <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                         <Image url="@images/olho.png" />
